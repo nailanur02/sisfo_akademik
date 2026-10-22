@@ -49,7 +49,7 @@ class MapelController extends Controller
 
     public function destroy(Mapel $mapel)
     {
-        if ($mapel->nilai()->exists()) {
+        if ($mapel->nilais()->exists()) {
             return redirect()->route('mapel.index')->with('error', 'mata pelajaran tidak bisa dihapus karena masih memiliki nilai.');
         }
        $mapel->delete();

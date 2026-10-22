@@ -24,7 +24,7 @@
                             <th>Nama Guru</th>
                             <th>Gender</th>
                             <th>Email</th>
-                            <th>No Hp</th>
+                            <th>No HP</th>
                             <th width="12%" class="text-center">Aksi</th>
                         </tr>
                     </thead>

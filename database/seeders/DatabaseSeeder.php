@@ -138,11 +138,11 @@ class DatabaseSeeder extends Seeder
         Nilai::create([
             'siswa_id' => $siswa2->id,
             'mapel_id' => $mapel1->id,
-            'nilai_tugas' => 70,
-            'nilai_uts' => 65,
-            'nilai_uas' => 70,
-            'nilai_akhir' => 68.50,
-            'keterangan' => 'Tidak Lulus',
+            'nilai_tugas' => 88,
+            'nilai_uts' => 88,
+            'nilai_uas' => 85,
+            'nilai_akhir' => 86.80,
+            'keterangan' => 'Lulus',
         ]);
     }
 }

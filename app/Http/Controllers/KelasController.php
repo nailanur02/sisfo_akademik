@@ -52,7 +52,7 @@ class KelasController extends Controller
     public function destroy(Kelas $kela)
     {
         if ($kela->siswas()->exists()) {
-            return redirect()->route('kelas.index')->with('error', 'kelas tidak bisa dihapus karena masihmemiliki siswa.');
+            return redirect()->route('kelas.index')->with('error', 'kelas tidak bisa dihapus karena masih memiliki siswa.');
         }
        $kela->delete();
        return redirect()->route('kelas.index')->with('success', 'kelas berhasil dihapus');

@@ -20,11 +20,11 @@
                     <thead class="bg-primary text-white">
                         <tr>
                             <th width="5%">No</th>
-                            <th>Nis</th>
+                            <th>NIS</th>
                             <th>Nama Siswa</th>
-                            <th>Jenis_Kelamin</th>
+                            <th>Jenis Kelamin</th>
                             <th>Kelas</th>
-                            <th>No_Hp</th>
+                            <th>No HP</th>
                             <th width="15%" class="text-center">Aksi</th>
                         </tr>
                     </thead>
