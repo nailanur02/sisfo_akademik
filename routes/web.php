@@ -20,11 +20,17 @@ Route::middleware('auth')->group(function () {
     Route::get('/home', [DashboardController::class, 'index'])->name('home');
 
     // Master data
-    Route::resource('kelas', KelasController::class)->except('show');
-    Route::resource('siswa', SiswaController::class);
-    Route::resource('guru', GuruController::class)->except('show');
-    Route::resource('mapel', MapelController::class)->except('show');
+    Route::middleware('role:admin')->group(function(){
+        Route::resource('kelas', KelasController::class)->except(['index','show']);
+        Route::resource('siswa', SiswaController::class)->except(['index', 'show']);
+        Route::resource('guru', GuruController::class)->except(['index', 'show']);
+        Route::resource('mapel', MapelController::class)->except(['index', 'show']);
+    });
+    
+    Route::resource('kelas', KelasController::class)->only('index');
+    Route::resource('siswa', SiswaController::class)->only(['index', 'show']);
+    Route::resource('guru', GuruController::class)->only('index');
+    Route::resource('mapel', MapelController::class)->only('index');
 
-    // Data nilai akademik
     Route::resource('nilai', NilaiController::class)->except('show');
 });
