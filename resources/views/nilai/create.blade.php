@@ -50,6 +50,7 @@
                 <div class="form-group">
                     <label for="nilai_tugas">Nilai Tugas</label>
                     <input type="number" name="nilai_tugas" id="nilai_tugas" step="0.01" min="0" max="100"
+                        \\ fiks: hapus variabel nilai di form tambah nilai
                         value="{{ old('nilai_tugas') }}"
                         class="form-control @error('nilai_tugas') is-invalid @enderror">
                     @error('nilai_tugas')
